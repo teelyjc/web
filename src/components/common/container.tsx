@@ -9,7 +9,11 @@ interface ContainerProps {
 export const Container = forwardRef<HTMLDivElement, ContainerProps>(
   ({ children, className, ...props }, ref) => {
     return (
-      <div className={clsx('container', className)} {...props} ref={ref}>
+      <div
+        className={clsx('container px-16 py-10', className)}
+        {...props}
+        ref={ref}
+      >
         {children}
       </div>
     );
